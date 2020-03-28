@@ -1,4 +1,4 @@
-package application;
+package io.kubepia.application;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -12,7 +12,7 @@
  * and limitations under the License.
  */
 
-package application;
+package io.kubepia.application;
 
 import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
 import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
