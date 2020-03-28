@@ -7,22 +7,24 @@ metadata:
     build-date: 2019-10-29T16:44:53.794580
     commit.image.appsody.dev/author: myguddy <seungil.han@gmail.com>
     commit.image.appsody.dev/committer: myguddy <seungil.han@gmail.com>
-    commit.image.appsody.dev/date: Sun Mar 29 00:20:00 2020 +0900
+    commit.image.appsody.dev/date: Sun Mar 29 01:11:55 2020 +0900
     commit.image.appsody.dev/message: clean
     commit.stack.appsody.dev/author: Steve Groeger <groeges@uk.ibm.com>
     commit.stack.appsody.dev/committer: GitHub <noreply@github.com>
     commit.stack.appsody.dev/contextDir: /incubator/java-spring-boot2
     commit.stack.appsody.dev/date: Tue Mar 10 21:35:36 2020 +0000
-    commit.stack.appsody.dev/message: 'Merge pull request #313 from groeges/release-0.6'
-    description: This image is the Kabanero development container for the java-spring-boot2
+    commit.stack.appsody.dev/message: "Merge pull request #313 from groeges/release-0.6"
+    description:
+      This image is the Kabanero development container for the java-spring-boot2
       stack
     distribution-scope: public
-    image.opencontainers.org/created: "2020-03-29T01:03:21+09:00"
+    image.opencontainers.org/created: "2020-03-29T01:13:08+09:00"
     image.opencontainers.org/documentation: https://github.com/iamnogada/cicd-asd-ocp
-    image.opencontainers.org/revision: 95d8618afd084279d56c677a58439a6d70e14ed9-modified
+    image.opencontainers.org/revision: 52bbb5f9b99a9ce29ef5c6a6e5dcba6a868341d6-modified
     image.opencontainers.org/source: https://github.com/iamnogada/cicd-asd-ocp/tree/master
     image.opencontainers.org/url: https://github.com/iamnogada/cicd-asd-ocp
-    k8s.io/description: The Universal Base Image is designed and engineered to be
+    k8s.io/description:
+      The Universal Base Image is designed and engineered to be
       the base layer for all of your containerized applications, middleware and utilities.
       This base image is freely redistributable, but Red Hat only supports Red Hat
       technologies through subscriptions for Red Hat products. This image is maintained
@@ -59,6 +61,7 @@ metadata:
     stack.appsody.dev/id: java-spring-boot2
     stack.appsody.dev/version: 0.3.24
   name: cicd-asd-ocp
+  namespace: cicd
 spec:
   applicationImage: docker.io/nogada/cicd-asd
   createKnativeService: false
@@ -72,7 +75,7 @@ spec:
     periodSeconds: 2
   monitoring:
     endpoints:
-    - path: /actuator/prometheus
+      - path: /actuator/prometheus
     labels:
       k8s-app: cicd-asd-ocp
   readinessProbe:
