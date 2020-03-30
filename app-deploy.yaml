@@ -55,6 +55,8 @@ metadata:
     vcs-type: git
     vendor: Kabanero
     version: 0.3.23
+    image.openshift.io/triggers: >-
+      [{"from":{"kind":"ImageStreamTag","name":"sam-store-git:latest"},"fieldPath":"spec.template.spec.containers[?(@.name==\"sam-store-git\")].image"}]
   creationTimestamp: null
   labels:
     image.opencontainers.org/title: cicd-asd-ocp
