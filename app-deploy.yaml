@@ -5,10 +5,10 @@ metadata:
     architecture: x86_64
     authoritative-source-url: registry.access.redhat.com
     build-date: 2019-10-29T16:44:53.794580
-    commit.image.appsody.dev/author: myguddy <seungil.han@gmail.com>
-    commit.image.appsody.dev/committer: myguddy <seungil.han@gmail.com>
-    commit.image.appsody.dev/date: Sun Mar 29 01:11:55 2020 +0900
-    commit.image.appsody.dev/message: clean
+    commit.image.appsody.dev/author: seungil han <13878666+iamnogada@users.noreply.github.com>
+    commit.image.appsody.dev/committer: GitHub <noreply@github.com>
+    commit.image.appsody.dev/date: Mon Mar 30 23:10:29 2020 +0900
+    commit.image.appsody.dev/message: Update app-deploy.yaml
     commit.stack.appsody.dev/author: Steve Groeger <groeges@uk.ibm.com>
     commit.stack.appsody.dev/committer: GitHub <noreply@github.com>
     commit.stack.appsody.dev/contextDir: /incubator/java-spring-boot2
@@ -18,11 +18,11 @@ metadata:
       This image is the Kabanero development container for the java-spring-boot2
       stack
     distribution-scope: public
-    image.opencontainers.org/created: "2020-03-29T01:13:08+09:00"
-    image.opencontainers.org/documentation: https://github.com/iamnogada/cicd-asd-ocp
-    image.opencontainers.org/revision: 52bbb5f9b99a9ce29ef5c6a6e5dcba6a868341d6-modified
-    image.opencontainers.org/source: https://github.com/iamnogada/cicd-asd-ocp/tree/master
-    image.opencontainers.org/url: https://github.com/iamnogada/cicd-asd-ocp
+    image.opencontainers.org/created: "2020-04-04T23:37:20+09:00"
+    image.opencontainers.org/documentation: https://github.com/iamnogada/cicd-sody
+    image.opencontainers.org/revision: 0989b6fe0fb9b3d16f9deadfd6fd3824061fd41e-modified
+    image.opencontainers.org/source: https://github.com/iamnogada/cicd-sody/tree/master
+    image.opencontainers.org/url: https://github.com/iamnogada/cicd-sody
     k8s.io/description:
       The Universal Base Image is designed and engineered to be
       the base layer for all of your containerized applications, middleware and utilities.
@@ -55,19 +55,17 @@ metadata:
     vcs-type: git
     vendor: Kabanero
     version: 0.3.23
-    image.openshift.io/triggers: >-
-      [{"from":{"kind":"ImageStreamTag","name":"sam-store-git:latest"},"fieldPath":"spec.template.spec.containers[?(@.name==\"sam-store-git\")].image"}]
   creationTimestamp: null
   labels:
-    image.opencontainers.org/title: cicd-asd-ocp
+    image.opencontainers.org/title: cicd-sody
     stack.appsody.dev/id: java-spring-boot2
     stack.appsody.dev/version: 0.3.24
-  name: cicd-asd-ocp
-  namespace: cicd
+  name: cicd-sody
+  namespace: "101"
 spec:
-  applicationImage: docker.io/nogada/cicd-asd
+  applicationImage: cicd-sody:latest
   createKnativeService: false
-  expose: true
+  expose: false
   livenessProbe:
     failureThreshold: 12
     httpGet:
@@ -79,7 +77,7 @@ spec:
     endpoints:
       - path: /actuator/prometheus
     labels:
-      k8s-app: cicd-asd-ocp
+      k8s-app: cicd-sody
   readinessProbe:
     failureThreshold: 12
     httpGet:
