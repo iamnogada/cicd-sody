@@ -61,7 +61,7 @@ metadata:
     stack.appsody.dev/id: java-spring-boot2
     stack.appsody.dev/version: 0.3.24
   name: cicd-sody
-  namespace: "101"
+  namespace: "cicd"
 spec:
   applicationImage: cicd-sody:latest
   createKnativeService: false
